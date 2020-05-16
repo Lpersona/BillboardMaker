@@ -1,12 +1,10 @@
-import React from "react";
-import "./index.css";
+import { observer } from 'mobx-react';
+import React from 'react';
+import { CONTAINER } from '../../config';
+import './index.css';
 
 const SketchBoard: React.FC = () => {
-  return (
-    <section className="sketch-board">
-      <canvas id="sketch"></canvas>
-    </section>
-  );
+  return <section className="sketch-board" id={CONTAINER}></section>;
 };
 
-export default SketchBoard;
+export default observer(SketchBoard);
