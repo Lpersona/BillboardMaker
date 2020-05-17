@@ -5,9 +5,19 @@ class CanvasItemStore {
   @observable
   canvasItemList: ICanvasItem[] = [];
 
+  @observable
+  currentCanvasItem: ICanvasItem | undefined;
+
   @action.bound
-  setItem(item: ICanvasItem) {
+  addItem(item: ICanvasItem) {
     if (item) this.canvasItemList.push(item);
+  }
+
+  @action.bound
+  setCurrentItem(item: ICanvasItem) {
+    if (this.currentCanvasItem?.name !== item.name) {
+      this.currentCanvasItem = item;
+    }
   }
 
   @action.bound
