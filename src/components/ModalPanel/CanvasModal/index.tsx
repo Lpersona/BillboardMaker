@@ -23,7 +23,7 @@ const CanvasModal: React.FC = () => {
   return (
     <>
       <Input
-        placeholder={'请输入画板名称'}
+        placeholder={'请输入画板id'}
         value={value}
         onChange={(e) => setValue(e.target.value)}
       />

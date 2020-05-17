@@ -9,14 +9,15 @@ const Tool: React.FC = () => {
   const { modelStore } = useStores();
   const { setkey } = modelStore;
 
-  const handleCreateCanvas = () => {
-    setkey(MODEL_TYPE.CANVAS);
-  };
+  // const handleCreateCanvas = () => {
+  //   setkey(MODEL_TYPE.CANVAS);
+  // };
 
   return (
     <section className="tool">
-      <Button onClick={handleCreateCanvas}>新建画板</Button>
+      {/* <Button onClick={handleCreateCanvas}>新建画板</Button> */}
       <Button>文字</Button>
+      <Button>图片</Button>
     </section>
   );
 };

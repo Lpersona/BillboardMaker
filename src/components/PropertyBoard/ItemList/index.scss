@@ -1,0 +1,21 @@
+.item-list {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  background-color: skyblue;
+
+  .item {
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0 5px;
+    user-select: none;
+
+    &:hover {
+      background-color: pink;
+      color: white;
+    }
+  }
+}
