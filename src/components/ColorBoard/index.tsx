@@ -10,9 +10,9 @@ const ColorBoard: React.FC = () => {
 		const ctx = (canvas as HTMLCanvasElement).getContext("2d");
 		if (ctx) {
 			setCtx(ctx);
-			for (var i = 0; i < 60; i++) {
-				for (var j = 0; j < 60; j++) {
-					for (var k = 0; k < 60; k++) {
+			for (let i = 0; i < 60; i++) {
+				for (let j = 0; j < 60; j++) {
+					for (let k = 0; k < 60; k++) {
 						ctx.fillStyle = `rgb(${Math.floor(255 - 4.25 * i)}, ${Math.floor(
 							255 - 4.25 * j,
 						)}, ${Math.floor(255 - 4.25 * k)})`;
@@ -23,7 +23,7 @@ const ColorBoard: React.FC = () => {
 		}
 	}, []);
 
-	const handleGetColor = (e: React.MouseEvent<HTMLCanvasElement, MouseEvent>) => {
+	const handleGetColor = (e: React.MouseEvent<HTMLCanvasElement, MouseEvent>): void => {
 		e.persist();
 		const canvas = document.getElementById("color-board");
 		if (canvas) {
