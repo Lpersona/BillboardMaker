@@ -4,11 +4,32 @@
 	left: 300px;
 	display: flex;
 	flex-direction: column;
-	height: 330px;
+	height: 350px;
 	width: 300px;
 
 	.value {
 		height: 100%;
 		background-color: skyblue;
+	}
+
+	.color-slider {
+		height: 100%;
+		background: linear-gradient(
+			to right,
+			rgb(255, 0, 0),
+			rgb(0, 0, 255),
+			rgb(0, 255, 0),
+			rgb(255, 0, 0)
+		);
+
+		.ant-slider {
+			background-color: transparent;
+
+			.ant-slider-rail,
+			.ant-slider-track,
+			.ant-slider-handle {
+				background-color: transparent;
+			}
+		}
 	}
 }
